@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculatorApp</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="calculator.js" defer></script>
+</head>
+<body>
+
+    <header class="app-header">
+        <h1>Calculator App</h1>
+        <button class="theme-switch" onclick="toggleTheme()">Switch to Dark mode</button>
+    </header>
+
+
+    <div class="app-content">
+
+
+
+        <div class="calculator-grid">
+            <div class="output">
+                <div data-previous-input class="previous-input"></div>
+                <div data-current-input class="current-input"></div>
+            </div>
+            <button data-all-clear>AC</button>
+            <button data-negate>+/-</button>
+            <button data-delete>DEL</button>
+            <button data-operation>÷</button>
+            <button data-number>1</button>
+            <button data-number>2</button>
+            <button data-number>3</button>
+            <button data-operation>*</button>
+            <button data-number>4</button>
+            <button data-number>5</button>
+            <button data-number>6</button>
+            <button data-operation>+</button>
+            <button data-number>7</button>
+            <button data-number>8</button>
+            <button data-number>9</button>
+            <button data-operation>-</button>
+            <button data-number>.</button>
+            <button data-number>0</button>
+            <button data-equals class="span-two">=</button>
+        </div>
+
+
+
+        
+        <div class="history-box">
+            <h2>History</h2>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+
+
+
+        <script>
+            function toggleTheme() {
+                document.body.classList.toggle("light-mode");
+                const button = document.querySelector(".theme-switch");
+                if (document.body.classList.contains("light-mode")) {
+                    button.textContent = "Switch to Dark Mode";
+                } else {
+                    button.textContent = "Switch to Light Mode";
+                }
+            }
+            </script>
+            
+    <footer>
+        <a href="/about">About</a>
+        <a href="/">Home</a>
+    </footer>        
+</body>
+</html>
